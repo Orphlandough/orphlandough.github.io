@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>78records.com</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/ShellacLogoV1.png" alt="Company Logo" />
+        </a>
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="Signin.html">My Account</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Navbar -->
+      <div class="navbar">
+        <input
+          type="text"
+          class="search-bar"
+          placeholder="Search a record..."
+        />
+        <a href="#" class="hs-feature-placeholder">
+            <img src="images/Featuredstandardv2.png" alt="Featured Product" />
+          </a>
+        <div class="nav-links">
+            <div class="category-filter">
+                <button data-category="All" class="filter-btn active">All</button>
+                <button data-category="Dealer & Quality Stock" class="filter-btn">Vinyl</button>
+                <button data-category="Hot Jazz" class="filter-btn">CD</button>
+                <button data-category="Vocal" class="filter-btn">Cassette</button>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- Featured Section with Filter -->
+      <div class="featured-container">
+        <!-- Category Filter (Now on the right in a row) -->
+      </div>
+      <!-- Product Grid -->
+      <div class="product-container">
+        <div class="product" data-category="vinyl">
+          <img src="images/s-l1600-7.webp" alt="Vinyl Album 1" />
+          <h3>Vinyl Album 1</h3>
+          <p>$19.99</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-category="cd">
+          <img src="images/s-l1600-7.webp" alt="CD Album 1" />
+          <h3>CD Album 1</h3>
+          <p>$24.99</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-category="cassette">
+          <img src="images/s-l1600-7.webp" alt="Cassette Album 1" />
+          <h3>Cassette Album 1</h3>
+          <p>$29.99</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-category="vinyl">
+          <img src="images/s-l1600-7.webp" alt="Vinyl Album 2" />
+          <h3>Vinyl Album 2</h3>
+          <p>$34.99</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-category="cd">
+          <img src="images/s-l1600-7.webp" alt="CD Album 2" />
+          <h3>CD Album 2</h3>
+          <p>$39.99</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-category="cassette">
+          <img src="images/s-l1600-7.webp" alt="Cassette Album 2" />
+          <h3>Cassette Album 2</h3>
+          <p>$44.99</p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <button id="prevPage">Previous</button>
+        <span id="pageNumber">1</span>
+        <button id="nextPage">Next</button>
+      </div>
+    </div>
+
+    <script>
+      const sidebarLinks = document.querySelectorAll(".sidebar ul li a");
+      sidebarLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          sidebarLinks.forEach((l) => l.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
